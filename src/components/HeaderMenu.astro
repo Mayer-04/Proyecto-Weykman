@@ -15,9 +15,50 @@ const { logo } = Astro.props;
       <li><a href="/initiatives">Iniciativas</a></li>
       <li><a href="/FooterContact">Contacto</a></li>
     </ul>
-    <button data-theme-toggle type="button">
-      <img src="/icons/moon.svg" alt="Icono Luna" data-dark-icon />
-      <img src="/icons/sun.svg" alt="Icono Sol" data-light-icon />
+    <button id="themeToggle" type="button">
+      <img id="themeDark" src="/icons/moon.svg" alt="Icono Luna" />
+      <img id="themeLight" src="/icons/sun.svg" alt="Icono Sol" />
     </button>
+    <div class="space-y-1 cursor-pointer">
+      <span class="block h-0.5 w-8 bg-sky-600"></span>
+      <span class="block h-0.5 w-6 bg-sky-600"></span>
+      <span class="block h-0.5 w-4 bg-sky-600"></span>
+    </div>
   </nav>
 </header>
+
+<script is:inline>
+const $themeToggle = document.querySelector("#themeToggle");
+const $themeToggleDark = document.querySelector("#themeDark");
+const $themeToggleLight = document.querySelector("#themeLight");
+const $prefersDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+const $storedTheme = localStorage.getItem("color-theme");
+
+const toggleTheme = () => {
+  const isDarkMode = document.documentElement.classList.toggle("dark");
+  localStorage.setItem("color-theme", isDarkMode ? "dark" : "light");
+};
+
+const updateThemeIcons = () => {
+  $themeToggleDark.classList.toggle(
+    "hidden",
+    document.documentElement.classList.contains("dark")
+  );
+  $themeToggleLight.classList.toggle(
+    "hidden",
+    !document.documentElement.classList.contains("dark")
+  );
+};
+
+if ($storedTheme === "dark" || (!$storedTheme && $prefersDarkMode)) {
+  document.documentElement.classList.add("dark");
+}
+
+updateThemeIcons();
+$themeToggle.addEventListener("click", () => {
+  toggleTheme();
+  updateThemeIcons();
+});
+</script>
