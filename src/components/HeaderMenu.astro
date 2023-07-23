@@ -3,13 +3,17 @@ const { logo } = Astro.props;
 ---
 
 <header
-  class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b duration-300 border-b-transparent px-20"
+  class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b duration-300 border-b-transparent px-20 dark:bg-zinc-800"
 >
-  <nav class="flex justify-between items-center w-full h-20 text-sky-600">
-    <a class="text-sky-600" href="/">
-      <h2 class="text-3xl font-bold text-sky-600">{logo}🫱🏼‍🫲🏽</h2>
+  <nav class="flex justify-between items-center w-full h-20">
+    <a class="text-sky-600 dark:text-white" href="/">
+      <h2 class="text-3xl font-bold text-sky-600 dark:text-white">
+        {logo}🫱🏼‍🫲🏽
+      </h2>
     </a>
-    <ul class="flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium">
+    <ul
+      class="flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
+    >
       <li><a href="/quiensoy">¿Quién Soy?</a></li>
       <li><a href="/informacion">Información</a></li>
       <li><a href="/iniciativas">Iniciativas</a></li>
