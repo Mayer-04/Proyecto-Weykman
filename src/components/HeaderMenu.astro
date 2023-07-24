@@ -14,14 +14,19 @@ const { logo } = Astro.props;
     <ul
       class="flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
     >
-      <li><a href="/quiensoy">¿Quién Soy?</a></li>
+      <li><a href="/">¿Quién Soy?</a></li>
       <li><a href="/informacion">Información</a></li>
       <li><a href="/iniciativas">Iniciativas</a></li>
       <li><a href="/FooterContact">Contacto</a></li>
     </ul>
     <button id="themeToggle" type="button">
       <img id="themeDark" src="/icons/moon.svg" alt="Icono Luna" />
-      <img id="themeLight" src="/icons/sun.svg" alt="Icono Sol" />
+      <img
+        class="hover:drop-shadow-[0_0_12px_#fbbf24] dark:hover:drop-shadow-[0_0_12px_#f59e0b]"
+        id="themeLight"
+        src="/icons/sun.svg"
+        alt="Icono Sol"
+      />
     </button>
     <!-- <div class="space-y-1 cursor-pointer lg:hidden">
       <span class="block h-0.5 w-8 bg-sky-600"></span>
