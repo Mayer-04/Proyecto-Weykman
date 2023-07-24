@@ -28,46 +28,56 @@ const { logo } = Astro.props;
         alt="Icono Sol"
       />
     </button>
-    <!-- <div class="space-y-1 cursor-pointer lg:hidden">
+    <!-- Icono hamburguesa para menú movil -->
+    <div class="space-y-1 cursor-pointer lg:hidden">
       <span class="block h-0.5 w-8 bg-sky-600"></span>
       <span class="block h-0.5 w-6 bg-sky-600"></span>
       <span class="block h-0.5 w-4 bg-sky-600"></span>
-    </div> -->
+    </div>
   </nav>
 </header>
 
-<script is:inline>
-const $themeToggle = document.querySelector("#themeToggle");
-const $themeToggleDark = document.querySelector("#themeDark");
-const $themeToggleLight = document.querySelector("#themeLight");
-const $prefersDarkMode = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-).matches;
-const $storedTheme = localStorage.getItem("color-theme");
+<script>
+  const $themeToggle = document.querySelector("#themeToggle");
+  const $themeToggleDark = document.querySelector("#themeDark");
+  const $themeToggleLight = document.querySelector("#themeLight");
+  const $prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const $storedTheme = localStorage.getItem("color-theme");
 
-const toggleTheme = () => {
-  const isDarkMode = document.documentElement.classList.toggle("dark");
-  localStorage.setItem("color-theme", isDarkMode ? "dark" : "light");
-};
+  const toggleTheme = () => {
+    const isDarkMode = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("color-theme", isDarkMode ? "dark" : "light");
+  };
 
-const updateThemeIcons = () => {
-  $themeToggleDark.classList.toggle(
-    "hidden",
-    document.documentElement.classList.contains("dark")
-  );
-  $themeToggleLight.classList.toggle(
-    "hidden",
-    !document.documentElement.classList.contains("dark")
-  );
-};
+  const updateThemeIcons = () => {
+    $themeToggleDark.classList.toggle(
+      "hidden",
+      document.documentElement.classList.contains("dark")
+    );
+    $themeToggleLight.classList.toggle(
+      "hidden",
+      !document.documentElement.classList.contains("dark")
+    );
+  };
 
-if ($storedTheme === "dark" || (!$storedTheme && $prefersDarkMode)) {
-  document.documentElement.classList.add("dark");
-}
+  if ($storedTheme === "dark" || (!$storedTheme && $prefersDarkMode)) {
+    document.documentElement.classList.add("dark");
+  }
 
-updateThemeIcons();
-$themeToggle.addEventListener("click", () => {
-  toggleTheme();
   updateThemeIcons();
-});
+  $themeToggle.addEventListener("click", () => {
+    toggleTheme();
+    updateThemeIcons();
+  });
+</script>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobileMenu");
+  const mobileMenuItems = document.getElementById("mobileMenuItems");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenuItems.classList.toggle("hidden");
+  });
 </script>
