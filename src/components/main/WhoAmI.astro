@@ -1,0 +1,25 @@
+---
+import IframeOne from "../iframes/IframeOne.astro";
+
+interface Props {
+  title: string;
+  firstText: string;
+  secondText: string;
+}
+const { title, firstText, secondText } = Astro.props;
+---
+
+<article
+  class="flex flex-col items-center bg-sky-600 text-white rounded-2xl p-4 md:p-8"
+>
+  <h2 class="text-center mb-4 md:mb-6 text-2xl md:text-3xl font-bold">
+    {title}
+  </h2>
+  <p class="text-base md:text-lg mb-4 md:mb-6">
+    {firstText}
+  </p>
+  <p class="text-base md:text-lg mb-4 md:mb-6">
+    {secondText}
+  </p>
+  <IframeOne />
+</article>

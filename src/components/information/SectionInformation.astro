@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  image: string;
+}
+const { title, text, image } = Astro.props;
+---
+
+<section class="flex flex-col items-center">
+  <h2 class="mb-4 text-2xl font-bold text-sky-600">{title}</h2>
+  <p class="mb-5 dark:text-white lg:text-lg">
+    {text}
+  </p>
+  <img
+    width="300"
+    height="200"
+    class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
+    src={image}
+    alt={title}
+    loading="lazy"
+  />
+</section>

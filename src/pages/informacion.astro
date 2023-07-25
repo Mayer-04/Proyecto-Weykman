@@ -1,5 +1,7 @@
 ---
 import IframeTwo from "../components/iframes/IframeTwo.astro";
+import FirstInformation from "../components/information/FirstInformation.astro";
+import SectionInformation from "../components/information/SectionInformation.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -7,53 +9,18 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="max-w-2xl flex flex-col gap-10 items-center justify-center mx-auto mt-8 p-4 sm:p-8"
   >
-    <section class="flex flex-col items-center">
-      <h2 class="mb-5 text-2xl font-bold text-sky-600">Salto de Fe</h2>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        Soy consciente y tengo claro los problemas y soluciones, pero con la
-        bendición, el salto de fe y el acompañamiento en las urnas de cada uno
-        de ustedes, el 30 de octubre amanecerá un mejor porvenir. Tenemos
-        previsto atender todos los sectores: vivienda, salud, medio ambiente,
-        infraestructura vial, agropecuario, cultura, deportes, educación, entre
-        otros.
-      </p>
-      <img
-        width="300"
-        height="200"
-        class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
-        src="/img/weykman10.webp"
-        alt=""
-      />
-      <p class="mb-5 dark:text-white lg:text-lg">
-        A toda la comunidad de este bello municipio, les pido que sigamos
-        persistiendo firmes en trabajar unidos por el desarrollo de Consacá y el
-        bienestar de nuestra gente. <br />
-        Sigamos difundiendo y sumando voces y esfuerzos. Los exhorto a que nos permitan
-        llevar un mensaje claro de amor, progreso y bienestar integral para toda
-        la ciudadanía, para que luego sea la herencia y el futuro de nuestros hijos.
-      </p>
-    </section>
+    <FirstInformation
+      title="Salto de Fe"
+      firstText="Soy consciente y tengo claro los problemas y soluciones, pero con la bendición, el salto de fe y el acomáñamiento en las urnas de cada uno de ustedes, el 30 de Octubre amanecerá un mejor porvenir. Tenemos previsto atender todos los sectores: vivienda, salud, medio ambiente, infraestructura vial, agropecuario, cultura, deportes, educación, entre otros"
+      image="/img/weykman10.webp"
+      secondText="A toda la comunidad de este bello municipio, les pido que sigamos persistiendo firmes en trabajar unidos por el desarrollo de Consacá y el bienestar de nuestra gente. Sigamos difundiendo y sumando voces y esfuerzos. Queremos llevar un mensaje claro de amor, progreso y bienestar integral para toda la cuidadanía, para que luego sea la herencia y el futuro de nuestros hijos."
+    />
 
-    <section class="flex flex-col items-center">
-      <h2 class="mb-4 text-2xl font-bold text-sky-600">Unión Pendular</h2>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        De las malas administraciones pasadas, las personas suelen culpar a las
-        disputas y la falta de unión entre los partidos de derecha e izquierda.
-        Para solucionar este inconveniente, nosotros aquí decidimos unir a dos
-        precandidatos de izquierda con dos precandidatos de derecha. Llegamos a
-        un gran acuerdo de unión pendular y nos sentamos a la mesa para formar
-        un gran pacto social por Consacá. Ha llegado la hora de despertar y
-        alimentar el amor y sentido de pertenencia por nuestro terruño.
-      </p>
-      <img
-        width="300"
-        height="200"
-        class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
-        src="/img/weykman8.webp"
-        alt=""
-        loading="lazy"
-      />
-    </section>
+    <SectionInformation
+      title="Unión Pendular"
+      text="De las malas administraciones pasadas, las personas suelen culpar a las disputas y la falta de unión entre los partidos de derecha e izquierda. Para solucionar este inconveniente, nosotros aquí decidimos unir a dos precandidatos de izquierda con dos precandidatos de derecha. Llegamos a un gran acuerdo de unión pendular y nos sentamos a la mesa para formar un pacto social por Consacá. Ha llegado la hora de despertar y alimentar el amor y sentido de pertenencia por nuestro terruño."
+      image="/img/weykman8.webp"
+    />
 
     <section class="flex flex-col items-center">
       <h2 class="mb-5 text-2xl font-bold text-sky-600">A conciencia</h2>
@@ -87,54 +54,18 @@ import Layout from "../layouts/Layout.astro";
       <IframeTwo />
     </section>
 
-    <section class="flex flex-col items-center">
-      <h2 class="mb-5 text-2xl font-bold text-sky-600">El Pacto Histórico</h2>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        Este grupo, disfrazado de pacto histórico, llevó a cabo su primera
-        práctica amañada al inhabilitar al mejor candidato, quien poseía mayor
-        conocimiento y experiencia administrativa.
-      </p>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        El pacto histórico contaminado llevó a cabo una estrategia maquiavélica
-        con los precandidatos alternativos de Consacá, consistente en hacerlos
-        afiliarse a un partido político y luego complicar el proceso de
-        asamblea. Después de hacerles esperar, les prometieron el consenso pero
-        finalmente no les dieron el aval. Todo esto fue llevado a cabo para
-        favorecer únicamente al precandidato predeterminado de la Colombia
-        Humana.
-      </p>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        La Colombia Humana y el Pacto Histórico en Consacá lo distorsionaron en
-        el momento en que decidieron jugar sucio, dejando de ser una marca de
-        Gustavo Petro y convirtiéndose en un pacto tradicional, es decir, de los
-        mismos de siempre.
-      </p>
-      <img
-        width="300"
-        height="200"
-        class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
-        src="/img/weykman7.webp"
-        alt=""
-        loading="lazy"
-      />
-    </section>
+    <SectionInformation
+      title="El Pacto Histórico"
+      text="Este grupo disfrazado de Pacto Histórico, llevó a cabo su primera práctica amañada al inhabilitar al mejor candidato, quien poseía mayor conocimiento y experiencia administrativa."
+      text="El Pacto Histórico contaminado llevó a cabo una estrategia maquiavélica con los precandidatos alternativos de Consacá, consistente en hacerlos afiliarse a un partido político y luego complicar el proceso de asamble. Después de hacerles esperar, les prometieron el consenso pero finalmente no les dieron el aval. Todo esto fue llevado a cabo para favorecer únicamente al precandidato predeterminado de la Colombia Humana."
+      text="La Colombia Humana y el Pacto Histórico en Consacá lo distorsionaron en el momento en que decidieron jugar sucio, dejando de ser una marca de Gustavo Petro y convertiéndose en un pacto tradicional, es decir, de los mimos de siempre."
+      image="/img/weykman7.webp"
+    />
 
-    <section class="flex flex-col items-center">
-      <h2 class="mb-5 text-2xl font-bold text-sky-600">Cierre de ciclo</h2>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        Los invito a que me acompañen a cerrar este ciclo de más de 4 décadas de
-        atraso, corrupción e indolencia en nuestro municipio de Consacá. También
-        les convido a que me acompañen a abrir las puertas a un nuevo ciclo de
-        progreso, bienestar y renovación para un cambio social.
-      </p>
-      <img
-        width="300"
-        height="200"
-        class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
-        src="/img/weykman6.webp"
-        alt=""
-        loading="lazy"
-      />
-    </section>
+    <SectionInformation
+      title="Cierre de Ciclo"
+      text="Los invito a que me acompañen a cerrar este ciclo de más de 4 décadas de atraso, corrupción e indolencia en nuestro municipio de Consacá. También los convido a que me acompañen a abrir las puertas a una nueva etapa de progreso, bienestar y renovación para un cambio social."
+      image="/img/weykman6.webp"
+    />
   </main>
 </Layout>

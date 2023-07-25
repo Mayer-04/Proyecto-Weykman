@@ -1,6 +1,7 @@
 ---
 import LandingHero from "../components/LandingHero.astro";
-import IframeOne from "../components/iframes/IframeOne.astro";
+import ArticleWhoAmI from "../components/main/ArticleWhoAmI.astro";
+import WhoAmI from "../components/main/WhoAmI.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,113 +10,27 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="max-w-2xl flex flex-col gap-8 md:gap-16 items-center justify-center mx-auto mt-10 p-6 md:p-11"
   >
-    <article
-      class="flex flex-col items-center bg-sky-600 text-white rounded-2xl p-4 md:p-8"
-    >
-      <h2 class="text-center mb-4 md:mb-6 text-2xl md:text-3xl font-bold">
-        ¿Quién Soy?
-      </h2>
-      <p class="text-base md:text-lg mb-4 md:mb-6">
-        Weykman Jojoa Parra es un consaqueño orgulloso de su tierra, criado y
-        educado por una familia honesta y trabajadora. Soy apasionado por el
-        campo, el deporte, la agricultura y el emprendimiento. Me considero una
-        persona tranquila, sencilla y trabajadora, además de ser un visionario y
-        un empresario cafetero.
-      </p>
-      <p class="text-base md:text-lg mb-4 md:mb-6">
-        Definitivamente, mi familia es mi pilar. Ser esposo y padre ha sido una
-        bendición que me ha transformado y ha sacado lo mejor de mí, ya que amo
-        y conozco mi tierra. Me siento capaz y me he preparado para contribuir
-        al desarrollo turístico, comunitario, agrícola e infraestructural de
-        Consacá, pues estoy seguro de que es lo que necesita para avanzar hacia
-        el futuro. Con una visión enfocada en estos aspectos, estoy comprometido
-        a trabajar arduamente y hacer mi aporte para el crecimiento de nuestra
-        comunidad.
-      </p>
-      <IframeOne />
-    </article>
+    <WhoAmI
+      title="¿Quién Soy?"
+      firstText="Weyman Jojoa Parra es un consaqueño orgulloso de su tierra, criado y educado por una familia honesta y trabajadora. Soy apasionado por el campo, el deporte, la agricultura y el emprendimiento. Me considero una persona tranquila, sencilla y trabajadora, además de ser un visionario y un empresario cafetero."
+      secondText="Mi familia es mi pilar. Ser esposo y padre ha sido una bendición que me ha transformado y ha sacado lo mejor de mí, ya que amo y conozco mi tierra. Me siento capaz y me he preparado para contribuir al desarrollo turístico, comunitario, agrícola e infraestructural de Consacá. Con una visión enfocada en estos aspectos, estoy comprometido a trabajar arduamente y hacer mi aporta para el crecimiento de nuestra comunidad."
+    />
 
-    <article class="flex flex-col items-center relative">
-      <h2
-        class="text-center mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-sky-600"
-      >
-        Equipo de trabajo
-      </h2>
-      <p class="text-base md:text-lg mb-4 md:mb-6 relative dark:text-white">
-        Sé que con voluntad y buenas intenciones no es suficiente para llevar a
-        cabo una buena administración. También soy consciente de que se necesita
-        conocimiento, experiencia, contactos, buenas relaciones y amigos en el
-        gobierno departamental y nacional. Por eso, hemos completado esta parte
-        con la incorporación de un excelente equipo de lujo, conformado por el
-        Doctor Cristian Gómez, el Ingeniero Oscar Navarro, el Ingeniero Oscar
-        Melo y otros destacados líderes comunitarios, entre otros.
-        <span
-          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-1/4 h-1/4 blur-3xl bg-blue-300/80 group-hover/card:opacity-60 group-hover/card:w-full group-hover/card:h-full duration-300"
-        ></span>
-      </p>
-      <img
-        class="w-[280px] h-[200px] md:w-[400px] md:h-[300px] rounded-lg object-cover"
-        src="/img/weykman12.webp"
-        alt=""
-      />
-    </article>
+    <ArticleWhoAmI
+      title="Equipo de Trabajo"
+      text="Sé que con voluntad y buenas intenciones no es suficiente para llevar a cabo una buena administración. También soy consciente de que se necesita conocimiento, experiencia, contactos, buenas relaciones y amigos en el gobierno departamental y nacional. Por eso, hemos completado esta parte con la incorporación de un excelente equipo de lujo, conformado por el Doctor Cristian Gómez, el Ingeniero Oscar Navarro, el Ingeniero Oscar Melo  otros destacados líderes comunitarios."
+      image="/img/weykman12.webp"
+    />
+    <ArticleWhoAmI
+      title="Pacto Social por Consacá"
+      text="Creo en el trabajo en equipo, por eso los invito a unirnos y trabajar en un gran pacto social por Consacá. También hago extensiva la invitación a los partidos políticos de izquierda y derecha, a los precandidatos, a los líderes comunitarios y a los movimientos y organizaciones sociales. Unidos somos más fuertes y podemos transformar Consacá, colorearla con esperanza y dibujar en su rostro el progreso y desarrollo. No cerramos la puerta a nadie, estamos abiertos a unirnos y trabajar en alianza con todos los partidos políticos, líderes sociales y movimientos u organizaciones sociales. Juntos somos más fuertes y podemos transformar Consacá."
+      image="/img/logo.webp"
+    />
 
-    <article class="flex flex-col items-center relative">
-      <h2
-        class="text-center mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-sky-600"
-      >
-        Pacto social por Consacá
-      </h2>
-      <p class="text-base md:text-lg mb-4 md:mb-6 relative dark:text-white">
-        Creo en el trabajo conjunto, por eso los invito a unirnos y trabajar en
-        un gran pacto social por Consacá. También hago extensiva la invitación a
-        los partidos políticos de izquierda o derecha, a los precandidatos, a
-        los líderes comunitarios y a los movimientos y organizaciones sociales.
-        Unidos, somos más fuertes y podemos transformar Consacá, colorearla con
-        esperanza y dibujar en su rostro el progreso y el desarrollo. No
-        cerramos la puerta a nadie, estamos abiertos a unirnos y trabajar en
-        alianza con todos los partidos políticos, líderes sociales y movimientos
-        u organizaciones sociales. Creo firmemente en la colaboración y el
-        trabajo conjunto, ya que juntos somos más fuertes y podemos transformar
-        Consacá.
-        <span
-          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-1/4 h-1/4 blur-3xl bg-blue-300/80 group-hover/card:opacity-60 group-hover/card:w-full group-hover/card:h-full duration-300"
-        ></span>
-      </p>
-      <img
-        class="w-[280px] h-[200px] md:w-[400px] md:h-[300px] rounded-lg object-cover"
-        src="/img/logo.webp"
-        alt=""
-        loading="lazy"
-      />
-    </article>
-
-    <article class="flex flex-col items-center relative">
-      <h2
-        class="text-center mb-4 md:mb-6 text-2xl md:text-3xl font-bold text-sky-600"
-      >
-        Críticos reflexivos
-      </h2>
-      <p class="text-base md:text-lg mb-4 md:mb-6 relative dark:text-white">
-        No podemos cometer errores, es crucial tomar decisiones informadas,
-        quitarnos el velo de los ojos y examinar cuidadosamente lo que hay
-        detrás de cada candidato. Seamos críticos y reflexivos en nuestro
-        análisis, observando sus acciones y resultados pasados, evaluando su
-        carácter y cómo se relaciona con los demás. Prestemos atención a su
-        equipo de trabajo y examinemos su programa de gobierno. Lo más
-        importante es observar sus intenciones: si buscan su propio interés
-        personal o si están verdaderamente comprometidos con el bienestar de la
-        comunidad. Hagamos buen uso del poder del voto.
-        <span
-          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-1/4 h-1/4 blur-3xl bg-blue-300/80 group-hover/card:opacity-60 group-hover/card:w-full group-hover/card:h-full duration-300"
-        ></span>
-      </p>
-      <img
-        class="w-[280px] h-[200px] md:w-[400px] md:h-[300px] rounded-lg object-cover"
-        src="/img/weykman3.webp"
-        alt=""
-        loading="lazy"
-      />
-    </article>
+    <ArticleWhoAmI
+      title="Críticos Reflexivos"
+      text="No podemos cometer errores, es crucial tomar decisiones informadas, quitarnos el velo de los ojos y examinar cuidadosamente lo que hay detrás de cada candidato. Seamos críticos y reflexivos en nuestro análidad, observando sus acciones y resultados pasados. Prestemos atención a su equipo de trabajo y examinemos su programa de gobierno. Lo más importante es observar sus intenciones: si buscan su propio interés personal o si están verdaderamente comprometidos con el bienestar de la comunidad. Hagamos buen uso del poder del voto."
+      image="/img/weykman3.webp"
+    />
   </main>
 </Layout>
