@@ -1,15 +1,13 @@
----
-const { logo } = Astro.props;
----
-
 <header
   class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b duration-300 border-b-transparent lg:px-20 md:px-3 dark:bg-zinc-800"
 >
   <nav class="flex justify-between items-center w-full h-20 px-4 md:px-0">
     <a class="text-sky-600 dark:text-white" href="/">
-      <h2 class="text-2xl md:text-3xl font-bold">
-        {logo}🫱🏼‍🫲🏽
-      </h2>
+      <img
+        class="p-1 rounded-full w-14 h-14"
+        src="/img/logo.webp"
+        alt="Logo de Weyman"
+      />
     </a>
     <ul
       class="hidden md:flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
@@ -63,15 +61,21 @@ const { logo } = Astro.props;
       </button>
     </div>
   </nav>
-  <!-- Mobile Menu -->
+
   <div id="mobileMenu" class="hidden md:hidden">
     <ul
       class="flex flex-col items-center gap-5 px-4 py-2 bg-white dark:bg-zinc-800 dark:text-white"
     >
-      <li><a href="/">¿Quién Soy?</a></li>
-      <li><a href="/informacion">Información</a></li>
-      <li><a href="/iniciativas">Iniciativas</a></li>
-      <li><a href="/FooterContact">Contacto</a></li>
+      <li class="hover:underline duration-300"><a href="/">¿Quién Soy?</a></li>
+      <li class="hover:underline duration-300">
+        <a href="/informacion">Información</a>
+      </li>
+      <li class="hover:underline duration-300">
+        <a href="/iniciativas">Iniciativas</a>
+      </li>
+      <li class="hover:underline duration-300">
+        <a href="/FooterContact">Contacto</a>
+      </li>
     </ul>
   </div>
 </header>

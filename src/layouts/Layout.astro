@@ -20,13 +20,14 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="icon" type="image/webp" href="/img/logo.webp" />
     <meta name="author" content="Mayer Andres Chaves Prada" />
     <meta
       name="keywords"
       content="Nariño, Consacá, Comunidad, Progreso, Proyectos, Bienestar, Cambio"
     />
   </head>
-  <body class="dark:dark:bg-zinc-800">
+  <body class="dark:bg-zinc-800">
     <HeaderMenu logo="Weyman" />
     <slot />
     <FooterContact />
