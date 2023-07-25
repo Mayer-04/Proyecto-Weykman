@@ -7,7 +7,7 @@ module.exports = {
 			fontFamily: {
 				inter: ["Inter", "ui-sans-serif"]
 			}
-		},
+		}
 	},
 	plugins: [
 		require('tailwindcss-animated')
