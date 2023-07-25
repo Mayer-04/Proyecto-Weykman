@@ -3,38 +3,69 @@ const { logo } = Astro.props;
 ---
 
 <header
-  class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b duration-300 border-b-transparent px-20 dark:bg-zinc-800"
+  class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b duration-300 border-b-transparent px-4 md:px-20 dark:bg-zinc-800"
 >
   <nav class="flex justify-between items-center w-full h-20">
     <a class="text-sky-600 dark:text-white" href="/">
-      <h2 class="text-3xl font-bold text-sky-600 dark:text-white">
+      <h2 class="text-2xl md:text-3xl font-bold">
         {logo}🫱🏼‍🫲🏽
       </h2>
     </a>
     <ul
-      class="flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
+      class="hidden md:flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
     >
       <li><a href="/">¿Quién Soy?</a></li>
       <li><a href="/informacion">Información</a></li>
       <li><a href="/iniciativas">Iniciativas</a></li>
       <li><a href="/FooterContact">Contacto</a></li>
     </ul>
-    <button id="themeToggle" type="button">
-      <img id="themeDark" src="/icons/moon.svg" alt="Icono Luna" />
+    <button id="themeToggle" type="button" class="px-2 py-1 md:px-4">
       <img
-        class="hover:drop-shadow-[0_0_12px_#fbbf24] dark:hover:drop-shadow-[0_0_12px_#f59e0b]"
+        id="themeDark"
+        src="/icons/moon.svg"
+        alt="Icono Luna"
+        class="w-5 h-5 md:w-6 md:h-6"
+      />
+      <img
         id="themeLight"
         src="/icons/sun.svg"
         alt="Icono Sol"
+        class="w-5 h-5 md:w-6 md:h-6 hidden dark:block"
       />
     </button>
-    <!-- Icono hamburguesa para menú movil -->
-    <div class="space-y-1 cursor-pointer lg:hidden">
-      <span class="block h-0.5 w-8 bg-sky-600"></span>
-      <span class="block h-0.5 w-6 bg-sky-600"></span>
-      <span class="block h-0.5 w-4 bg-sky-600"></span>
+    <div class="md:hidden flex gap-4">
+      <button
+        id="mobileMenuButton"
+        type="button"
+        class="p-2 rounded-md bg-sky-600 dark:bg-white"
+      >
+        <svg
+          class="w-6 h-6 text-white dark:text-sky-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
     </div>
   </nav>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden">
+    <ul
+      class="flex flex-col gap-4 px-4 py-2 bg-white dark:bg-zinc-800 dark:text-white"
+    >
+      <li><a href="/">¿Quién Soy?</a></li>
+      <li><a href="/informacion">Información</a></li>
+      <li><a href="/iniciativas">Iniciativas</a></li>
+      <li><a href="/FooterContact">Contacto</a></li>
+    </ul>
+  </div>
 </header>
 
 <script>
@@ -74,10 +105,7 @@ const { logo } = Astro.props;
 </script>
 
 <script>
-  const mobileMenuButton = document.getElementById("mobileMenu");
-  const mobileMenuItems = document.getElementById("mobileMenuItems");
-
-  mobileMenuButton.addEventListener("click", () => {
-    mobileMenuItems.classList.toggle("hidden");
+  document.querySelector("#mobileMenuButton").addEventListener("click", () => {
+    document.querySelector("#mobileMenu").classList.toggle("hidden");
   });
 </script>
