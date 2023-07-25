@@ -11,11 +11,19 @@ const { logo } = Astro.props;
         {logo}🫱🏼‍🫲🏽
       </h2>
     </a>
-    <ul class="hidden md:flex gap-8">
-      <li><a href="/">¿Quién Soy?</a></li>
-      <li><a href="/informacion">Información</a></li>
-      <li><a href="/iniciativas">Iniciativas</a></li>
-      <li><a href="/FooterContact">Contacto</a></li>
+    <ul
+      class="hidden md:flex gap-8 [&>li>a]:text-sky-600 [&>li>a]:font-medium dark:[&>li>a]:text-white"
+    >
+      <li class="hover:underline duration-300"><a href="/">¿Quién Soy?</a></li>
+      <li class="hover:underline duration-300">
+        <a href="/informacion">Información</a>
+      </li>
+      <li class="hover:underline duration-300">
+        <a href="/iniciativas">Iniciativas</a>
+      </li>
+      <li class="hover:underline duration-300">
+        <a href="/FooterContact">Contacto</a>
+      </li>
     </ul>
 
     <button id="themeToggle" type="button" class="px-2 py-1 md:px-4">
