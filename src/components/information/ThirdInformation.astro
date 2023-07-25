@@ -2,17 +2,24 @@
 interface Props {
   title: string;
   firstText: string;
-  image: string;
   secondText: string;
+  thirdText: string;
+  image: string;
 }
 
-const { title, firstText, image, secondText } = Astro.props;
+const { title, firstText, secondText, thirdText, image } = Astro.props;
 ---
 
 <section class="flex flex-col items-center">
   <h2 class="mb-5 text-2xl font-bold text-sky-600">{title}</h2>
   <p class="mb-5 dark:text-white lg:text-lg">
     {firstText}
+  </p>
+  <p class="mb-5 dark:text-white lg:text-lg">
+    {secondText}
+  </p>
+  <p class="mb-5 dark:text-white lg:text-lg">
+    {thirdText}
   </p>
   <img
     width="300"
@@ -21,7 +28,4 @@ const { title, firstText, image, secondText } = Astro.props;
     src={image}
     alt={title}
   />
-  <p class="mb-5 dark:text-white lg:text-lg">
-    {secondText}
-  </p>
 </section>

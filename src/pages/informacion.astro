@@ -1,7 +1,9 @@
 ---
 import IframeTwo from "../components/iframes/IframeTwo.astro";
+import Consciously from "../components/information/Consciously.astro";
 import FirstInformation from "../components/information/FirstInformation.astro";
 import SectionInformation from "../components/information/SectionInformation.astro";
+import ThirdInformation from "../components/information/ThirdInformation.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -22,43 +24,21 @@ import Layout from "../layouts/Layout.astro";
       image="/img/weykman8.webp"
     />
 
-    <section class="flex flex-col items-center">
-      <h2 class="mb-5 text-2xl font-bold text-sky-600">A conciencia</h2>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        Algunas de las razones por las cuales la gente vota equivocadamente son
-        las siguientes:
-      </p>
-      <ul class="max-w-lgspace-y-1 text-sky-600 list-disc list-inside mb-5">
-        <li>
-          Votamos por un polítiquero de profesión y no por un político de
-          vocación.
-        </li>
-        <li>
-          Algunos votantes priorizan su beneficio personal sobre el bienestar de
-          la comunidad.
-        </li>
-        <li>La gente no vota a consciencia.</li>
-        <li>
-          La falta de información adecuada y la manipulación política también
-          contribuyen a que las personas no voten de manera consciente y
-          responsable.
-        </li>
-      </ul>
-      <p class="mb-5 dark:text-white lg:text-lg">
-        En síntesis, mucha gente muestra doble moral: por un lado, hablan en
-        contra de la corrupción, pero por otro lado, con su voto amañado
-        contribuyen a generar corrupción, lo cual es moralmente incorrecto. Los
-        invito a renovar y cambiar, a votar con conciencia, dignidad y por
-        mérito, para que Consacá recupere su alegría.
-      </p>
-      <IframeTwo />
-    </section>
+    <Consciously
+      title="A conciencia"
+      firstText="Algunas de las razones por las cuales la gente vota equivocamente son las siguientes:"
+      point1="Votamos por un polítiquero de profesión y no por un político de vocación."
+      point2="Algunos votantes priorizan su beneficio personal sobre el bienestar de la comunidad."
+      point3="La gente no vota a consciencia."
+      point4="La falta de información adecuada y la manipulación política también contribuyen a que las personas no voten de manera consciente y responsable"
+      secondText="En síntesis, mucha gente muestra doble moral: por un lado, hablan en contra de la corrupción, pero por otro lado, con su voto amañado contribuyen a generar corrupción, lo cual es moralmente incorrecto. Los invito a renovar y cambiar, a votar con conciencia, dignidad y por mérito, para que Consacá recupere su alegría."
+    />
 
-    <SectionInformation
+    <ThirdInformation
       title="El Pacto Histórico"
-      text="Este grupo disfrazado de Pacto Histórico, llevó a cabo su primera práctica amañada al inhabilitar al mejor candidato, quien poseía mayor conocimiento y experiencia administrativa."
-      text="El Pacto Histórico contaminado llevó a cabo una estrategia maquiavélica con los precandidatos alternativos de Consacá, consistente en hacerlos afiliarse a un partido político y luego complicar el proceso de asamble. Después de hacerles esperar, les prometieron el consenso pero finalmente no les dieron el aval. Todo esto fue llevado a cabo para favorecer únicamente al precandidato predeterminado de la Colombia Humana."
-      text="La Colombia Humana y el Pacto Histórico en Consacá lo distorsionaron en el momento en que decidieron jugar sucio, dejando de ser una marca de Gustavo Petro y convertiéndose en un pacto tradicional, es decir, de los mimos de siempre."
+      firstText="Este grupo disfrazado de Pacto Histórico, llevó a cabo su primera práctica amañada al inhabilitar al mejor candidato, quien poseía mayor conocimiento y experiencia administrativa."
+      secondText="El Pacto Histórico contaminado llevó a cabo una estrategia maquiavélica con los precandidatos alternativos de Consacá, consistente en hacerlos afiliarse a un partido político y luego complicar el proceso de asamble. Después de hacerles esperar, les prometieron el consenso pero finalmente no les dieron el aval. Todo esto fue llevado a cabo para favorecer únicamente al precandidato predeterminado de la Colombia Humana."
+      thirdText="La Colombia Humana y el Pacto Histórico en Consacá lo distorsionaron en el momento en que decidieron jugar sucio, dejando de ser una marca de Gustavo Petro y convertiéndose en un pacto tradicional, es decir, de los mimos de siempre."
       image="/img/weykman7.webp"
     />
 
