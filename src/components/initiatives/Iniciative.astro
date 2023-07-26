@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  iniciative: string;
+  image: string;
+}
+
+const { title, iniciative, image } = Astro.props;
+---
+
+<article
+  class="flex flex-col items-center justify-center p-6 border rounded-md shadow-md dark:bg-sky-600 dark:border-sky-600"
+>
+  <h2 class="text-center my-3 text-2xl font-bold text-sky-600 dark:text-white">
+    {title}
+  </h2>
+  <div>
+    <p class="my-3 lg:text-lg dark:text-white">
+      {iniciative}
+    </p>
+    <img
+      width="350"
+      height="280"
+      class="w-[350px] h-[280px] object-fill rounded-lg"
+      src={image}
+      alt={title}
+      loading="lazy"
+    />
+  </div>
+</article>

@@ -11,17 +11,17 @@ const { title, firstText, image, secondText } = Astro.props;
 
 <section class="flex flex-col items-center">
   <h2 class="mb-5 text-2xl font-bold text-sky-600">{title}</h2>
-  <p class="mb-5 dark:text-white lg:text-lg">
+  <p class="mb-6 dark:text-white lg:text-lg">
     {firstText}
   </p>
   <img
     width="300"
     height="200"
-    class="mb-5 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
+    class="mb-6 lg:w-[400px] lg:h-[280px] md:w-[300px] md:h-[200px] rounded-lg"
     src={image}
     alt={title}
   />
-  <p class="mb-5 dark:text-white lg:text-lg">
+  <p class="mb-6 dark:text-white lg:text-lg">
     {secondText}
   </p>
 </section>
