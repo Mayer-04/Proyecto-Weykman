@@ -1,0 +1,50 @@
+<button id="themeToggle" type="button" class="px-2 py-1 md:px-4">
+  <img
+    id="themeDark"
+    src="/icons/moon.svg"
+    alt="Icono Luna"
+    class="w-6 h-6 md:w-7 md:h-7"
+  />
+  <img
+    id="themeLight"
+    src="/icons/sun.svg"
+    alt="Icono Sol"
+    class="w-6 h-6 md:w-7 md:h-7 hidden dark:block"
+  />
+</button>
+
+<script is:inline>
+const $themeToggle = document.querySelector("#themeToggle");
+const $themeToggleDark = document.querySelector("#themeDark");
+const $themeToggleLight = document.querySelector("#themeLight");
+const $prefersDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+const $storedTheme = localStorage.getItem("color-theme");
+
+const toggleTheme = () => {
+  const isDarkMode = document.documentElement.classList.toggle("dark");
+  localStorage.setItem("color-theme", isDarkMode ? "dark" : "light");
+};
+
+const updateThemeIcons = () => {
+  $themeToggleDark.classList.toggle(
+    "hidden",
+    document.documentElement.classList.contains("dark")
+  );
+  $themeToggleLight.classList.toggle(
+    "hidden",
+    !document.documentElement.classList.contains("dark")
+  );
+};
+
+if ($storedTheme === "dark" || (!$storedTheme && $prefersDarkMode)) {
+  document.documentElement.classList.add("dark");
+}
+
+updateThemeIcons();
+$themeToggle.addEventListener("click", () => {
+  toggleTheme();
+  updateThemeIcons();
+});
+</script>
