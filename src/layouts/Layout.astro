@@ -2,6 +2,7 @@
 import FooterContact from "../components/FooterContact.astro";
 import HeaderMenu from "../components/HeaderMenu.astro";
 import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title: string;
 }
@@ -9,7 +10,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -32,37 +33,40 @@ const { title } = Astro.props;
     <HeaderMenu logo="Weykman" />
     <slot />
     <FooterContact />
-  </body><style is:global>
-    @font-face {
-      font-family: "Inter";
-      src: local("Inter"), url("/font/Inter.woff2") format("woff2");
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
+    <style is:global>
+      @font-face {
+        font-family: "Inter";
+        src:
+          local("Inter"),
+          url("/font/Inter.woff2") format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
 
-    ::-webkit-scrollbar {
-      width: 0.75rem;
-      height: 0.75rem;
-      background-color: #ffffff;
-    }
+      ::-webkit-scrollbar {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: #ffffff;
+      }
 
-    ::-webkit-scrollbar-thumb {
-      border-radius: 5px;
-      background-color: #0284c7;
-      border: 2px solid #0284c7;
-    }
+      ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #0284c7;
+        border: 2px solid #0284c7;
+      }
 
-    ::-webkit-scrollbar-track {
-      border-radius: 3px;
-      background-color: transparent;
-    }
+      ::-webkit-scrollbar-track {
+        border-radius: 3px;
+        background-color: transparent;
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: "Inter", ui-sans-serif;
-    }
-  </style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", ui-sans-serif;
+      }
+    </style>
+  </body>
 </html>
